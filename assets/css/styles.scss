@@ -1,27 +1,33 @@
 // font
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
 html {
     height: 100%;
 }
+
 body{
     min-height: 100%;
     display: flex;
     align-items: center;
 }
+
 .slick-container{
-    width: 500px;
+    width: 700px;
     margin: 0 auto;
     text-align: center;
     position: relative;
+
     @media screen and (max-width: 550px) {
         margin: 50% auto;
     }
+
     .slick-prev{
         top:-30px!important;
         right:40px!important;
@@ -29,76 +35,86 @@ body{
         @media screen and (max-width: 550px) {
             right:55%!important;
         }
+
         &:before{
             color:#333;
             font-size:20px;
             font-weight:bold;
             font-family: "Font Awesome 5 Free";
             content: "\f191";
+
             @media screen and (max-width: 550px) {
                 font-size:25px;
             }
         }
     }
+
     .slick-next{
         top:-30px!important;
         right:0!important;
         @media screen and (max-width: 550px) {
             left:55%!important;
         }
+
         &:before{
             color:#333;
             font-size:20px;
             font-weight:bold;
             font-family: "Font Awesome 5 Free";
             content: "\f152";
+
             @media screen and (max-width: 550px) {
                 font-size:25px;
             }
         }
     }
+
     .slick-dots li button:before{
         font-family: "Font Awesome 5 Free";
         content: "\f111";
         opacity: 1;
     }
+
     .slick-dots li.slick-active button::before{
         color:lightblue;
         font-size: 15px;
         opacity: 1;
-
     }
+
     .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before{
         color:lightblue;
     }
+
     .cards-portfolio{
         height: 450px;
         margin: 0 25px;
-        box-shadow: 0 10px 6px -6px #777;
         position: relative;
+
         @media screen and (max-width: 550px) {
             height: 550px;
         }
+
         .image-portfolio{
             height: 70%;
             background-size: cover;
             background-position: top;
-
             position: relative;
-
             transition: 300ms ease-out;
-
             box-shadow: 0 8px 8px -4px lightblue;
+
             &:hover{
                 transform: translateY(5px);
                 cursor: pointer;
+
                 &::before{
                     opacity: 70%;
                 }
+
                 .project-link{
                     opacity: 1;
                 }
             }
+
             &::before{
                 opacity: 0;
                 content:'';
@@ -113,6 +129,7 @@ body{
                 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(173,216,230,1) 92%);       
                 transition: 300ms ease-out;
             }
+
             .project-link{
                 position: absolute;
                 bottom:0;
@@ -123,22 +140,32 @@ body{
                 padding: 10px;
                 transition: 300ms ease-in-out;
                 font-size:13px;
+
                 a{
                     text-decoration: none;
                     color:#333;
                     transition: 300ms ease-in-out;
+
                     i{
                         transition: 300ms ease-in-out;
+                        font-size: 10px;
                     }
+
                     &:hover{
                         i{
-                            transform: translateX(5px);
+                            transform: translateX(3px);
                         }
                     }
-                
                 }
             }
         }
+
+        .image-portfolio--gif {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
         .details{
             height:30%;
             padding-top: 35px;
